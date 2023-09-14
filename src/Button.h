@@ -50,6 +50,7 @@ class Button {
 		inline void begin() { pinMode(m_pin, INPUT_PULLUP); }
 		bool read();
 		bool toggled();
+		inline bool state() { return m_state; }
 		inline bool pressed() { return read() == PRESSED && changed(); }
 		inline bool released() { return read() == RELEASED && changed(); }
 
